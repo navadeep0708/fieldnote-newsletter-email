@@ -1,0 +1,31 @@
+/*
+ * Fieldnote Studio | November Workshop Note
+ * Source stylesheet for the email build (Job YJoBaWMJ8i2uJggm8fvQ).
+ *
+ * Core visual styles live inline in newsletter.html. The rules below are the
+ * helper and responsive overrides. They are ALSO embedded in a <style> block
+ * in newsletter.html, so the delivered email works without this file.
+ * Keep the two copies identical.
+ *
+ * Palette: #EFF4EF page, #FFFFFF content, #124B42 header/CTA/footer,
+ *          #E3F1E9 cards, #213733 body text, #415A54 hero sub-copy (from draft).
+ * Desktop maximum: 600px. Mobile reference: 360px.
+ */
+
+body { margin: 0; padding: 0; }
+table { border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+img { border: 0; }
+a { text-decoration: none; }
+
+/* Mobile: viewport 600px and below (360px reference) */
+@media only screen and (max-width: 600px) {
+  .outer-pad { padding-left: 0 !important; padding-right: 0 !important; }  /* email fills the viewport */
+  .px        { padding-left: 20px !important; padding-right: 20px !important; }  /* 28px -> 20px */
+  .hero      { padding-bottom: 16px !important; }
+  .h1        { margin-bottom: 4px !important; }
+  .sub       { margin-bottom: 7px !important; }
+  .cards     { padding-bottom: 37px !important; }
+  .col       { display: block !important; width: 100% !important; height: auto !important; }  /* stack the cards */
+  .gutter    { display: block !important; width: 100% !important; height: 13px !important;
+               line-height: 13px !important; font-size: 13px !important; }
+}
